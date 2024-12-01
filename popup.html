@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TwCipher</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>TwCipher</h2>
+    <div id="setup-section" class="section">
+      <h3>Setup</h3>
+      <input type="email" id="email" placeholder="Enter your email">
+      <button id="generate-keys">Generate GPG Keys</button>
+    </div>
+    
+    <div id="keys-section" class="section" style="display: none;">
+      <h3>Your Keys</h3>
+      <div id="public-key"></div>
+      <button id="copy-public-key">Copy Public Key</button>
+    </div>
+    
+    <div id="encrypt-section" class="section">
+      <h3>Encrypt Message</h3>
+      <input type="email" id="recipient-email" placeholder="Recipient's email">
+      <textarea id="message" placeholder="Enter message to encrypt"></textarea>
+      <button id="encrypt">Encrypt</button>
+    </div>
+    
+    <div id="decrypt-section" class="section">
+      <h3>Decrypt Message</h3>
+      <textarea id="encrypted-message" placeholder="Paste encrypted message"></textarea>
+      <button id="decrypt">Decrypt</button>
+    </div>
+  </div>
+  <script src="lib/openpgp.min.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
